@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- I confirm that this coursework submission is entirely my own work, 
+except where explicitly stated otherwise.
+-->
+<head>
+  <meta charset="utf-8">
+ <!--title and header defined -->  
+  <title>Results of Tennis Matches played at Wimbledon 2013 </title>
+  <h1>Results of Tennis Matches played at Wimbledon 2013</h1>
+  <!-- style sheet -->  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <!--form defined -->  
+<form id="formValue">
+<br><br>
+  
+  <select file="whichFile" id="whichFile">
+  <option value="womens">women</option>
+  <option value="mens">men</option>
+  </select><br>
+  <label for="pname"> Name of Player:</label><br>
+  <input type="text" name="pname" id="pname" pattern="[A-Za-z.&#45;]*"><br>
+   <!--Query options for player using dropdown  -->
+  <legend> Query Options</legend><br>
+  <select name="queryplayer" id="queryplayer">
+  <option value="equals">equals</option>
+  <option value="contains">contains</option>
+  <option value="none">none</option>
+  </select><br>
+  <!-- Input sets into box, there is a min and max limit set for input, is required  -->
+  <label for="sets" required>Number of sets</label><br>
+  <input type="number" name="sets" id="sets" min="0" max="6"><br>
+   <!--Query options for sets using dropdown  -->
+  <legend> Query Options</legend><br>
+  <select name="querysets" id="querysets">
+  <option value="equals">equals</option>
+  <option value="greater than">greater than</option>
+  <option value="less than">less than</option>
+  </select><br>
+   <!-- Input round into box, there is a min and max limit set for input, is required  -->
+  <label for="round" required>Value for the round</label><br>
+  <input type="number" name="round" id="round" min="0" max="8"><br>
+   <!--Query options for round using dropdown  -->
+  <legend> Query Options</legend><br>
+  <select name="queryround" id="queryround">
+  <option value="equals">equals</option>
+  <option value="greater than">greater than</option>
+  <option value="less than">less than</option>
+  </select>
+
+</form>
+  
+  <br>
+  
+ 
+  
+<!--var output document.getElementById('output');
+  output.innerHTML = jcontent.firstname;-->
+
+<button type="button" id="submit">Click me</button>
+<button type="button" onClick="refresh()">Refresh</button>
+
+<script type="text/javascript" src="refresh.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="load.js"></script>
+
+
+
+<!-- Defines results area -->
+<div id="result-area">
+
+ </div>
+
+</body>
+
+</html>
+
+
